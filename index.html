@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignmrnt 6</title>
+</head>
+<body>
+    <script>
+        // var studentNames = [];
+        // var studentNames = new Array();
+        // var stringsArray = ["apple", "banana", "cherry"];
+        // var numbersArray = [1, 2, 3, 4, 5];
+        // var booleanArray = [true, false, true, true, false];
+        // var mixedArray = ["apple", 123, true, "banana", 456];
+        // var educationQualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+        // document.write("<h1>Qualifications:</h1>")
+        // document.write("1)"+educationQualifications[0]+ "<br>")
+        // document.write("2)"+educationQualifications[1]+ "<br>")
+        // document.write("3)"+educationQualifications[2]+ "<br>")
+        // document.write("4)"+educationQualifications[3]+ "<br>")
+        // document.write("5)"+educationQualifications[4]+ "<br>")
+        // document.write("6)"+educationQualifications[5]+ "<br>")
+        // document.write("7)"+educationQualifications[6]+ "<br>")
+        // document.write("8)"+educationQualifications[7]+ "<br>")
+
+//------------------------------------ Task 8
+// var studentNames = ["Ali", "Umar", "Shayan"];
+// // Store scores of the three students in an array (out of 500)
+// var studentScores = [320, 230, 480];
+//  document.write("Score of " + studentNames[0]+ studentScores[0]," .Percentage is : " + ((studentScores[0]/500)*100)+"%"+ "<br>");
+//  document.write("Score of " + studentNames[1]+ studentScores[1]," .Percentage is : " + ((studentScores[1]/500)*100)+"%"+ "<br>");
+//  document.write("Score of " + studentNames[3]+ studentScores[2]," .Percentage is : " + ((studentScores[2]/500)*100)+"%"+ "<br>");
+
+//------------------------------------ Task 9
+// var colorArray = ["red", "green", "blue"];
+// document.write("<p>Original Array: " + colorArray+ "</p>");
+
+// // a. Ask the user what color to add to the beginning
+// var colorToAddBeginning = prompt("Enter a color to add to the beginning:");
+// colorArray.unshift(colorToAddBeginning)
+// console.log(colorArray);
+// // b. Ask the user what color to add to the end
+// var colorToAddEnding = prompt("Enter a color to add to endning:");
+// colorArray.push(colorToAddEnding);
+// console.log(colorArray);
+// // c. Add two more colors to the beginning
+// colorArray.unshift("pink","sky")
+// console.log(colorArray);
+// // d. Delete the first color in the array
+// colorArray.shift()
+// console.log(colorArray);
+// // e. Delete the last color in the array
+// colorArray.pop()
+// console.log(colorArray);
+// // f. Ask the user at which index to add a color
+// var indexToAdd = prompt("Enter the index to add a color:");
+// var colorToAdd = prompt("Enter the color to add at that index:");
+// colorArray.splice(indexToAdd, 0, colorToAdd);
+// console.log(colorArray);
+// // g. Ask the user at which index to delete color(s)
+// var indexToAdd = prompt("Enter the index to start deleting");
+// var colorToAdd = prompt("Enter the color to add in Array");
+// colorArray.splice(indexToAdd,0,colorToAdd)
+// console.log(colorArray);
+// // Display the updated array in the browser
+// document.write("<p>Updated Array: " + colorArray + "</p>");
+
+ //---------------------------------------Task 10
+ // Array to store student scores
+ var studentScores = [85, 92, 78, 90, 88, 95, 72, 97, 84];
+
+
+    // Display original scores
+    console.log("Original Scores:", studentScores);
+
+ //---------------------------------------Task 11
+
+    // Array of city names in Pakistan
+    let pakistanCities = ["Karachi", "Lahore", "Islamabad", "Rawalpindi", "Faisalabad"];
+
+    // Display the initialized array
+    console.log("Cities lists:", pakistanCities);
+let SelectedCities = pakistanCities.slice(3, 5);
+    console.log("Selected Cities:", SelectedCities);
+ //---------------------------------------Task 12
+
+    var arr = ["This", " is", " my", " cat"];
+   document.write("Array:<br>" ,arr);
+
+// Create a single string using the join method
+var concatenatedString = arr.join("  ");
+
+// Display the result
+document.write("<br> <br>String:","<br>", concatenatedString);
+document.write("<<br> <br>")
+
+ //---------------------------------------Task 13
+// Create a new array for FIFO
+var fifoArray = [];
+
+fifoArray.push("Keyboard")
+fifoArray.push("Mouse")
+fifoArray.push("Printer")
+fifoArray.push("Monitor")
+
+// Display the array before removal
+console.log("Array before removal:", fifoArray);
+
+// Remove values from the array in the order they were stored
+var removedValue1 = fifoArray.shift();
+ var removedValue2 = fifoArray.shift();
+ var removedValue3 = fifoArray.shift();
+var removedValue4 = fifoArray.shift();
+
+// Display the removed values and the array after removal
+console.log("Out Values:", removedValue1,removedValue2,removedValue3,removedValue4 );
+console.log("Array after removal:", fifoArray);
+document.write("<br>")
+
+ //---------------------------------------Task 14
+// Create a new array for Last In, First Out (LIFO)
+var lifoArray = [];
+
+// Store values one by one
+lifoArray.push("Hassan");
+lifoArray.push("sarim");
+lifoArray.push("Akram");
+document.write("Names : <br>",lifoArray);
+
+lifoArray.pop();
+
+document.write("<br><br>Out : <br>",lifoArray);
+lifoArray.pop();
+
+ document.write("<br><br>Out : <br>",lifoArray);
+lifoArray.pop();
+ document.write("<br><br>Out : <br>",lifoArray);
+document.write("<br>")
+
+ //---------------------------------------Task 15
+ // Array of phone manufacturers
+var phoneManufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+
+// Start building the HTML string for the dropdown/select menu
+var dropdownHTML = "<select>";
+
+// Iterate through the array to create options
+for (var i = 0; i < phoneManufacturers.length; i++) {
+  dropdownHTML += "<option value='" + phoneManufacturers[i] + "'>" + phoneManufacturers[i] + "</option>";
+}
+
+// Close the select tag
+dropdownHTML += "</select>";
+
+// Display the dropdown/select menu in the browser
+document.write(dropdownHTML);
+
+
+
+
+
+
+    </script>
+</body>
+</html>
